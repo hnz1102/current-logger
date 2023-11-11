@@ -1,0 +1,37 @@
+Reference,Value,Footprint,Datasheet,distributor,Qty
+"C101,C102,C104,C105",0.1uF,Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder,~,https://www.digikey.com/en/products/detail/yageo/CC0603ZRY5V9BB104/2103081,4
+"C103, C106",10uF,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,~,https://www.digikey.com/en/products/detail/murata-electronics/GRM21BR61C106KE15K/2546903,2
+"C107, C109",1uF,Capacitor_SMD:C_0805_2012Metric,~,https://www.digikey.com/en/products/detail/yageo/CC0805ZRY5V7BB105/2833622,2
+C108,4.7uF,Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,~,https://www.digikey.com/en/products/detail/yageo/CC0805ZRY5V6BB475/2103109,1
+"D101, D102",LED RED,LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,https://www.digikey.com/en/products/detail/harvatek-corporation/B1931URO-20D000114U1930/15910603,2
+D103,LED GREEN,LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder,~,https://www.digikey.com/en/products/detail/harvatek-corporation/B1931NG-20D001114U1930/15861262,1
+D104,NSR0340HT1G,Diode_SMD:D_SOD-323_HandSoldering,https://www.onsemi.com/pub/Collateral/NSR0340H-D.PDF,https://www.digikey.com/en/products/detail/onsemi/NSR0340HT1G/1981491,1
+FB101,MH2029-601Y,Inductor_SMD:L_0805_2012Metric,~,https://www.digikey.com/en/products/detail/bourns-inc/MH2029-601Y/3741762,1
+"J101, J201, J202",USB4105-GF-A,Library:USB_C_5077CR-16-SMC2-BK-TR,https://www.usb.org/sites/default/files/documents/usb_type-c.zip,https://www.digikey.com/en/products/detail/gct/USB4105-GF-A/11198441,3
+"J102, J203, J206, J208, J211",PINOUT,Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical,~,,5
+J104,LiPo BATTERY,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,~,https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2B-PH-K-S/926611,1
+J204,USB_B_Mini,Library:usb mini B connector c2235 dim 2,~,https://akizukidenshi.com/catalog/g/gC-02235/,1
+J205,USB_A,Library:USB_A_5075AR-04, ~,https://akizukidenshi.com/catalog/g/gC-00160/,1
+J207,Screw_Terminal_01x03,Library:TB112-2-2-3-E-1 Terminal Block,~,https://akizukidenshi.com/catalog/g/gP-01310/,1
+J209,BATTERY OUT JST_PH,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,~,https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2B-PH-K-S/926611,1
+J210,BATTERY IN JST_PH,Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical,~,https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2B-PH-K-S/926611,1
+JP101,SolderJumper_2_Open,Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm,~,,1
+Q101,IRF7606TRPBF,Package_SO:MSOP-8_3x3mm_P0.65mm,http://www.irf.com/product-info/datasheets/data/irf7606pbf.pdf,https://www.digikey.com/en/products/detail/infineon-technologies/IRF7606TRPBF/856652,1
+"R101-R103, R105, R108-R111, R121, R122",10K,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,https://www.digikey.jp/en/products/detail/yageo/RC0603JR-1010KL/13694233,10
+R104,10m,Library:R_10mOHM,~,https://akizukidenshi.com/catalog/g/gP-01886/,1
+"R106, R116, R117",20K 1%,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,https://www.digikey.jp/en/products/detail/yageo/RC0603FR-0720KL/727040,3
+R107,12K 1%,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,https://www.digikey.com/en/products/detail/yageo/RC0603FR-0712KL/726913,1
+R112,2K,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,https://www.digikey.com/en/products/detail/yageo/RC0603JR-072KL/726726,1
+R113,1K,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,https://www.digikey.com/en/products/detail/yageo/RC0603FR-071KL/726843,1
+"R114, R115, R119, R120",330,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,https://www.digikey.com/en/products/detail/yageo/RC0603JR-13330RL/14286483,4
+R118,100K,Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,~,https://www.digikey.com/en/products/detail/yageo/RC0603JR-07100KL/726698,1
+"R123, R124",5.1K,Resistor_SMD:R_0603_1608Metric,~,https://www.digikey.com/en/products/detail/yageo/RC0603JR-075K1L/726796,2
+"SW101, SW102",TS-06104,Library:TS-06104,,https://akizukidenshi.com/catalog/g/gP-15969/,2
+SW103,SW_Push_LED_BLUE,Library:LS601-CU_CAP,~,https://akizukidenshi.com/catalog/g/gP-13871/,1
+SW104,SW_Push_LED_RED,Library:LS601-CU_CAP,~,https://akizukidenshi.com/catalog/g/gP-13870/,1
+SW105,SLIDE_SW,Library:SLIDE_SW_IS1235-G,~,https://akizukidenshi.com/catalog/g/gP-15368/,1
+U101,ESP32-C3-WROOM-02-N4,Library:IC18_ESP32-C3-WROOM-02-N4_EXP,ESP32-C3-WROOM-02-N4,https://www.digikey.com/en/products/detail/espressif-systems/ESP32-C3-WROOM-02-N4/14553031,1
+U102,INA228,Package_SO:VSSOP-10_3x3mm_P0.5mm,http://www.ti.com/lit/ds/symlink/ina226.pdf,https://www.digikey.com/en/products/detail/texas-instruments/INA228AIDGSR/13691042,1
+U103,SPX3819M5-L,Package_TO_SOT_SMD:SOT-23-5,https://www.exar.com/content/document.ashx?id=22106&languageid=1033&type=Datasheet&partnumber=SPX3819&filename=SPX3819.pdf&part=SPX3819,https://www.digikey.com/en/products/detail/maxlinear-inc/SPX3819M5-L-TR/2472388,1
+U104,MCP73831-2-OT,Package_TO_SOT_SMD:SOT-23-5,http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf,https://www.digikey.com/en/products/detail/microchip-technology/MCP73831T-2ACI-OT/964301,1
+U105,SSD1331_DISPLAY,Library:OLED SSD1331 SPI DISPLAY,,https://akizukidenshi.com/catalog/g/gP-14435/,1

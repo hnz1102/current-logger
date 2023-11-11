@@ -214,5 +214,11 @@ If it is `Active: active` as shown below, it has started normally.
 
 Push the START button. Logging data will be sent to the influxDB. You can see the data on the dashboard.
 
+## Schematic, PCB Gabar and Container 3D Data
+
+There is a Schematic data in hardware directory include 3D printing data. 
+
+![Container](doc/container.png)
+
 ## LICENSE
 This source code is licensed under MIT. Other Hardware Schematic documents are licensed under CC-BY-SA V4.0.
