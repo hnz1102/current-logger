@@ -1,0 +1,4 @@
+[currentlogger]
+wifi_ssid = "<your-AP-ssid>"
+wifi_psk = "<your-AP-Password>"
+http_server = "<PC address>:3001"

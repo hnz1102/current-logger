@@ -1,0 +1,10 @@
+[Unit]
+Description=InfluxDB Agent for Currentlogger
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/var/lib/currentlogger/influxdb-agent-start.sh
+
+[Install]
+WantedBy=multi-user.target
