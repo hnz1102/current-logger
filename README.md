@@ -43,7 +43,7 @@ DO NOT CONNECT WITH OPPOSITE POLARITY. IF CONNECTED, THE ADC IC IS WILL BE DAMAG
 ![current](doc/terminal.png)
 
 
-The measurement interval time can be selected from 5 ms to 1 sec. When the logger is powered on, the interval time is 5 ms, then pressing the INT button will set the interval to 100 ms, or 1 sec, and so on in multiples of 10.
+The measurement interval time can be selected from 5 ms to 1 sec. When the logger is powered on, the interval time is 5 ms, then pressing the INT button will set the interval to 10, 50, 100, 500ms, or 1 sec.
 Push the START button, then the logger starts to send to the server voltage, current and power consumption data.
 
 ![board](doc/display.png)
