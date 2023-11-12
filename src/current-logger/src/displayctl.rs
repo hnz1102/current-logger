@@ -128,7 +128,8 @@ impl DisplayPanel {
             let mut digit_img = n0_img.translate(Point::new(0,0));
 
             let mut loopcount = 0;
-            let mut battery = 0.0;
+            let mut battery_level = 0;
+            let mut battery_queue : [f32;10] = [0.0;10];
             loop {
                 let lck = txt.lock().unwrap();
                 display.clear();
@@ -252,7 +253,6 @@ impl DisplayPanel {
                     Text::new(&format!("{:.1}W", lck.power), Point::new(48, cur_pos), middle_style_red).draw(&mut display).unwrap();
                 }
                 Text::new(&format!("Int.{}ms", lck.interval), Point::new(10, 60), middle_style_white).draw(&mut display).unwrap();
-                Text::new(&format!("{:.1}V", lck.battery), Point::new(76, 60), small_style_white).draw(&mut display).unwrap();
 
                 // Water mark of buffer
                 let bar_len = (lck.buffer_water_mark * 95 / 100) as i32;
@@ -267,30 +267,94 @@ impl DisplayPanel {
                     },
                 }
 
-                if loopcount == 0 {
-                    battery = lck.battery;
+                battery_queue[loopcount] = lck.battery;
+                let mut battery_average = 0.0;
+                for i in 0..10 {
+                    battery_average += battery_queue[i];
                 }
-                if battery < 3.7 {
-                    bat0_img.draw(&mut display).unwrap();
+                battery_average = battery_average / 10.0;
+                Text::new(&format!("{:.1}V", battery_average), Point::new(76, 60), small_style_white).draw(&mut display).unwrap();
+                //                info!("battery_average: {}v", battery_average);
+                match battery_level {
+                    0 => {
+                        if battery_average > 3.75 {
+                            battery_level = 20;
+                        }
+                    },
+                    20 => {
+                        if battery_average > 3.85 {
+                            battery_level = 40;
+                        }
+                        else if battery_average < 3.7 {
+                            battery_level = 0;
+                        }
+                    },
+                    40 => {
+                        if battery_average > 3.95 {
+                            battery_level = 60;
+                        }
+                        else if battery_average < 3.8 {
+                            battery_level = 20;
+                        }
+                    },
+                    60 => {
+                        if battery_average > 4.05 {
+                            battery_level = 80;
+                        }
+                        else if battery_average < 3.9 {
+                            battery_level = 40;
+                        }
+                    },
+                    80 => {
+                        if battery_average > 4.15 {
+                            battery_level = 100;
+                        }
+                        else if battery_average < 4.0 {
+                            battery_level = 60;
+                        }
+                    }
+                    100 => {
+                        if battery_average > 4.55 {
+                            battery_level = 200;
+                        }
+                        else if battery_average < 4.1 {
+                            battery_level = 80;
+                        }
+                    },
+                    200 => {
+                        if battery_average < 4.5 {
+                            battery_level = 100;
+                        }
+                    },
+                    _ => {
+                        battery_level = 0;
+                    }
                 }
-                else if battery >= 3.7 && lck.battery < 3.8 {
-                    bat20_img.draw(&mut display).unwrap();
+                match battery_level {
+                    0 => {
+                        bat0_img.draw(&mut display).unwrap();
+                    },
+                    20 => {
+                        bat20_img.draw(&mut display).unwrap();
+                    },
+                    40 => {
+                        bat40_img.draw(&mut display).unwrap();
+                    },
+                    60 => {
+                        bat60_img.draw(&mut display).unwrap();
+                    },
+                    80 => {
+                        bat80_img.draw(&mut display).unwrap();
+                    },
+                    100 => {
+                        bat100_img.draw(&mut display).unwrap();
+                    },
+                    200 => {
+                        usbpwr_img.draw(&mut display).unwrap();
+                    },
+                    _ => {}
                 }
-                else if battery >= 3.8 && lck.battery < 3.9 {
-                    bat40_img.draw(&mut display).unwrap();
-                }
-                else if battery >= 3.9 && lck.battery < 4.0 {
-                    bat60_img.draw(&mut display).unwrap();
-                }
-                else if battery >= 4.0 && lck.battery < 4.1 {
-                    bat80_img.draw(&mut display).unwrap();
-                }
-                else if battery >= 4.1 && lck.battery < 4.5 {
-                    bat100_img.draw(&mut display).unwrap();
-                }
-                else if battery >= 4.5 {
-                    usbpwr_img.draw(&mut display).unwrap();
-                }
+
                 loopcount += 1;
                 if loopcount == 10 {
                     loopcount = 0;
